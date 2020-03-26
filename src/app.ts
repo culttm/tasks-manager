@@ -11,7 +11,7 @@ class App {
     }
 
     run(): void {
-        document.querySelector<HTMLElement>(this.selector).innerText = 'RUN!'
+        document.querySelector<HTMLElement>(this.selector).innerText = 'RUN!!! Forest! RUN!!!'
     }
 }
 
@@ -19,5 +19,5 @@ const app = new App({
     selector: '#app'
 });
 
-app.run()
+app.run();
 
