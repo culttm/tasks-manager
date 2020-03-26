@@ -1,8 +1,23 @@
+interface IOptions {
+    selector: string
+}
+
 class App {
-    constructor(private app: string) {
-        console.log(this.app)
+
+    private selector: string;
+
+    constructor(options: IOptions) {
+        this.selector = options.selector
+    }
+
+    run(): void {
+        document.querySelector<HTMLElement>(this.selector).innerText = 'RUN!'
     }
 }
 
-new App('hello!!!')
+const app = new App({
+    selector: '#app'
+});
+
+app.run()
 
