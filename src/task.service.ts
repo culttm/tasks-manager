@@ -6,7 +6,11 @@ export class TaskService {
     constructor() {}
 
     async load(): Promise<{}> {
-        const { data } = await axios.get(TaskService.url + 'tasks.json');
+        const { data } = await axios.get(TaskService.url + 'tasks.json', {
+            params: {
+                print: "pretty"
+            }
+        });
         return data
     }
 
